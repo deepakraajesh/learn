@@ -1,7 +1,7 @@
-from collections import deque
+import collections
 
 n = int(input())
-q = []
+q = collections.deque([])
 for i in range(0,n):
     s = input().split()
     if (s[0]=="append"):

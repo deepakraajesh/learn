@@ -1,23 +1,19 @@
-class Task:
-    mast = []
-    leng = len(mast)
-
-    def midofl(self):
-        pos=int(input())
-        val = int(input())
-        self.mast[pos]=val
-
-    def rem():
-        print()
-
 if __name__ == '__main__':
+    s = []
     N = int(input())
-    s=[]
-    t=Task()
-    for i in range(N):
-        temp=input()
-        if (temp=="insert"):
-            
-    
-    for i in s:
-        if (i==)
+    for i in range(0,N):
+        getinp=input().split()
+        if (getinp[0]=="append"):
+            s.append(int(getinp[1]))
+        elif (getinp[0] == "insert"):
+            s.insert(int(getinp[1]),int(getinp[2]))
+        elif (getinp[0] == "remove"):
+            s.remove(int(getinp[1]))
+        elif (getinp[0] == "pop"):
+            s.pop(int(getinp[1]))
+        elif (getinp[0] == "reverse"):
+            s.reverse()
+        elif (getinp[0] == "sort"):
+            s.sort()
+        elif (getinp[0] == "print"):
+            print(s)
