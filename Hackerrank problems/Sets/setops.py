@@ -4,9 +4,6 @@ if __name__ == "__main__":
     n = int(input())
     ts = set(map(int,input().split()))
 
-    inter = st.intersection(ts)
-    unite = st.union(ts)
-    for i in inter:
-        unite.discard(i)
-    for i in unite:
+    differ = st.symmetric_difference(ts)
+    for i in differ:
         print (i)
