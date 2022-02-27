@@ -36,8 +36,6 @@ class Bank(User):
 deep = Bank('Deepak',24,'M')
 user = Bank("Hari", 22, 'M')
 
-deep.show_user_det()
-user.show_user_det()
 
 condition=True
 

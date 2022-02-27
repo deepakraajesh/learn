@@ -1,9 +1,10 @@
 class Miss:
-    def find_missing(self):
-        l=[1,8,6,4,5,3,2]
-        l.sort()
-        for i in range (0, l[-1]):
-            if l[i]==i:
-                continue
-            else:
-                print (i,"is missing here")
+    def find_missing(self,l):
+        for i in range (1, max(l)):
+            if i not in l:
+                print(str(i) + " is not found in the array")
+
+print ("Enter an array of numbers with space")
+arr = list(map(int,input().split()))
+m = Miss()
+m.find_missing(arr)
