@@ -1,8 +1,13 @@
-import re
-main = input()
-sstr = input()
-res = []
-m = re.search(sstr,main)
-l = [m.start(),m.end()]
-res.append(l)
-print (res)
+from collections import namedtuple
+
+N = int(input())
+fields = input().split()
+
+total = 0
+for i in range(N):
+    students = namedtuple('student',fields)
+    field1, field2, field3,field4 = input().split()
+    student = students(field1,field2,field3,field4)
+    total += int(student.MARKS)
+print()
+print('{:.2f}'.format(total/N))

@@ -1,19 +1,21 @@
-import math
-from turtle import width
+import string
+alpha = string.ascii_lowercase
 
-ch = []
-ini = 'a'
-for i in range(0,26):
-    if i == 0:
-        ch.append(ini)
-    else:
-        ch.append(chr(ord(ini)+i))
+n = int(input())
+res = []
+for i in range(n):
+    s = "-".join(alpha[i:n])
+    res.append((s[::-1]+s[1:]).center(4*n-3, "-"))
+print('\n'.join(res[:0:-1]+res))
 
-sizenum = int(input())
-height = sizenum + (sizenum-1)
-widt = height + (height-1)
-mid = math.ceil(height/2)
+'''
+4n - 3 is solved like this
+height = n+(n-1) = 2n-1
+Ex: if n = 3 => 2*3 -1 = 5 is the height
+width = h+(h-1) = 2h-1
+Ex: if n=3 => 2*5 -1 = 9 is the width
+2h-1 => 2(2n-1)-1 => 4n-2-1 => 4n-3
 
-for i in range(1,mid+1):
-    if (i==mid):
-        print("None")
+res[:0:-1]
+prints the list in reverse order excludes the first element (In this case the whole list except mid element. This is to print other half)
+'''
