@@ -1,6 +1,4 @@
 from itertools import combinations
-
-from numpy import sort
 inp = input().split()
 res = list(combinations(inp[0],int(inp[1])))
 nres = []

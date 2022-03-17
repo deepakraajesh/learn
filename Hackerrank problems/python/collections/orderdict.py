@@ -1,5 +1,4 @@
 from collections import OrderedDict
-from lib2to3.pgen2.token import AMPER
 n = int(input())
 newdict = OrderedDict()
 for i in range (n):
