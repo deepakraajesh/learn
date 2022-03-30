@@ -1,18 +1,24 @@
 class Solution(object):    
-    def removeDuplicates(self, nums):
-        num = sorted(list(set(nums)))
-        res,s=[],'['
-        for i in range(len(num)):
-            res.append(num[i])
-        for i in range(len(nums)-len(num)):
-            res.append('_')
-        for i in res:
-            s+=str(i)+","
-        s+="\b]"
-        print(s)
-
+    def removeDuplicates(self, nums,v):
+        res=[]
+        for i in nums:
+            if (i!=v):
+                res.append(i)
+            print(res)
 s=Solution()
-nums=input()
-nums=nums[1:-1]
-nums=list(map(int,nums.split(',')))
-res = s.removeDuplicates(nums)
+nums=list(map(int,input().split()))
+v=int(input())
+s.removeDuplicates(nums,v)
+#Working solution
+"""
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        i = 0
+        for x in nums:
+            if x != val:
+                #you are changing the list itself
+                nums[i] = x
+                i += 1
+        #You are returning number of elements in list which prints the modified list
+        return i
+"""
