@@ -7,8 +7,7 @@ def sumdig(n, k):
     return sumdig(str(res*k),1)
 if __name__=='__main__':
     nk=list(input().split())
-    nk[0]=nk[0]*int(nk[1])
-    print(sumdig(nk[0]))
+    print(sumdig(nk[0],nk[1]))
 #Still 3 test cases failed
 '''
 from collections import Counter
